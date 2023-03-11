@@ -62,8 +62,16 @@ def move_table_after(table, paragraph):
     tbl, p = table._tbl, paragraph._p
     p.addnext(tbl)
 
+# template = Document("template.docx")
+# for style in template.styles: 
+#     print(style)
+# print(template.styles)
+# custom_table_style = template.styles[_TableStyle('Table Grid')]
 document = Document('file.docx')
 table = get_table_below_given_tag(document, "search word")
+# table_style = table.style
+# print(table.style.name)
+
 
 #Removing the table 
 table._element.getparent().remove(table._element)
@@ -71,14 +79,15 @@ table._element = None
 
 #experimenting the complete procedure here 
 paragraph = document.paragraphs[0];  # however you get this paragraph
-table = document.add_table(rows=1, cols=3)
+table = document.add_table(rows=1, cols=3 )
+
 records = (
     (3, '101', 'Spam'),
     (7, '422', 'Eggs'),
     (4, '631', 'Spam, spam, eggs, and spam')
 )
 
-# table.style = 'Table Grid'
+# table.style = '_Style 10'
 hdr_cells = table.rows[0].cells
 hdr_cells[0].text = 'Qty'
 hdr_cells[1].text = 'Id'
