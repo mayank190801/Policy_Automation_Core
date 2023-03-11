@@ -1,7 +1,7 @@
-Excel1.py
+excel1.py
 -> Trying to extract the table from Excel -- (not done)
 
-Excel2.py
+excel2.py
 -> Putting arrays of arrays data as a table into Excel - (done)
 
 mix.py
@@ -16,5 +16,5 @@ test1.py
 test2.py
 -> Extra code snippets
 
-Demo.py
+demo.py
 -> Simply how python-docx works and its' snippets
