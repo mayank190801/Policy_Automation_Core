@@ -70,15 +70,19 @@ from openpyxl.styles import Font
 wb = Workbook()
 ws = wb.active
 treeData = table_data
+ws.title = "genl_Table"
 
 for row in treeData: 
     ws.append(row)
-
 
 # ft = Font(bold=True)
 # for row in ws["A1:C1"]:
 #     for cell in row:
 #         cell.font = ft
+
+wsnew = wb.create_sheet("genl2_Table")
+for row in treeData: 
+    wsnew.append(row)
 
 
 wb.save("MixStore.xlsx")
